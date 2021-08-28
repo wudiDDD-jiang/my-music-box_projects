@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>LoginDialog</class>
+ <widget class="QDialog" name="LoginDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>609</width>
+    <height>620</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>609</width>
+    <height>620</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>609</width>
+    <height>620</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QTabWidget" name="tw_login_register">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>120</y>
+     <width>581</width>
+     <height>271</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>微软雅黑</family>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="currentIndex">
+    <number>0</number>
+   </property>
+   <widget class="QWidget" name="tb_login">
+    <attribute name="title">
+     <string>  登录  </string>
+    </attribute>
+    <widget class="QLabel" name="lb_password">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>100</y>
+       <width>72</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>密码</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="le_password">
+     <property name="geometry">
+      <rect>
+       <x>222</x>
+       <y>100</y>
+       <width>231</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>请输入10位以内的密码</string>
+     </property>
+     <property name="text">
+      <string>1</string>
+     </property>
+     <property name="frame">
+      <bool>true</bool>
+     </property>
+     <property name="echoMode">
+      <enum>QLineEdit::Password</enum>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pb_login">
+     <property name="geometry">
+      <rect>
+       <x>310</x>
+       <y>190</y>
+       <width>93</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>登录</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lb_tel">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>40</y>
+       <width>72</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>手机号</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="le_tel">
+     <property name="geometry">
+      <rect>
+       <x>222</x>
+       <y>40</y>
+       <width>231</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>请输入8-12位手机号</string>
+     </property>
+     <property name="text">
+      <string>1</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pb_clear">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>190</y>
+       <width>93</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>清空</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tb_register">
+    <attribute name="title">
+     <string>  注册  </string>
+    </attribute>
+    <widget class="QLabel" name="lb_tel_register">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>30</y>
+       <width>72</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>手机号</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lb_password_register">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>80</y>
+       <width>72</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>密码</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="le_tel_register">
+     <property name="geometry">
+      <rect>
+       <x>222</x>
+       <y>30</y>
+       <width>231</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>请输入8-12位手机号</string>
+     </property>
+     <property name="text">
+      <string>1</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="le_password_register">
+     <property name="geometry">
+      <rect>
+       <x>222</x>
+       <y>80</y>
+       <width>231</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>请输入10位以内的密码</string>
+     </property>
+     <property name="text">
+      <string>1</string>
+     </property>
+     <property name="echoMode">
+      <enum>QLineEdit::Password</enum>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pb_clear_register">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>190</y>
+       <width>93</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>清空</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pb_register">
+     <property name="geometry">
+      <rect>
+       <x>310</x>
+       <y>190</y>
+       <width>93</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>注册</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lb_confirm_register">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>130</y>
+       <width>72</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>确认密码</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="le_confirm_register">
+     <property name="geometry">
+      <rect>
+       <x>222</x>
+       <y>130</y>
+       <width>231</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>确认密码</string>
+     </property>
+     <property name="text">
+      <string>1</string>
+     </property>
+     <property name="echoMode">
+      <enum>QLineEdit::Password</enum>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>20</y>
+     <width>281</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap resource="resource.qrc">:/lib/icon.jpg</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QGroupBox" name="gb_like">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>410</y>
+     <width>501</width>
+     <height>181</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="title">
+    <string/>
+   </property>
+   <widget class="QCheckBox" name="cb_all">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>10</y>
+      <width>101</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>全选</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="cb_allnot">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>10</y>
+      <width>101</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>全不选</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="cb_popular">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>40</y>
+      <width>101</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>流行</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="cb_rock">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>40</y>
+      <width>101</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>摇滚</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="cb_ballad">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>40</y>
+      <width>101</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>民谣</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="cb_lightmusic">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>40</y>
+      <width>101</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>轻音乐</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="cb_ancient_style">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>70</y>
+      <width>101</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>古风</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="cb_electronic">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>70</y>
+      <width>101</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>电子</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="cb_rap">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>70</y>
+      <width>101</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>说唱</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="cb_sir">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>70</y>
+      <width>101</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>爵士</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QPushButton" name="pb_register_clear">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>540</y>
+     <width>98</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>清空</string>
+   </property>
+  </widget>
+ </widget>
+ <resources>
+  <include location="resource.qrc"/>
+ </resources>
+ <connections/>
+</ui>

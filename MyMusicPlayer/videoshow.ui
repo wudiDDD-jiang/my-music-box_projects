@@ -1,0 +1,613 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>VideoShow</class>
+ <widget class="QWidget" name="VideoShow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>800</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>VideoShow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(0, 0, 0);</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QWidget" name="wdg_content" native="true">
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <widget class="VideoItem" name="wdg_show" native="true"/>
+      </item>
+      <item>
+       <widget class="QListWidget" name="lw_videoList">
+        <property name="minimumSize">
+         <size>
+          <width>211</width>
+          <height>460</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>211</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 255, 255);</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QWidget" name="wdg_ctrl" native="true">
+     <property name="minimumSize">
+      <size>
+       <width>780</width>
+       <height>91</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>91</height>
+      </size>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_3">
+        <item>
+         <widget class="QLabel" name="lb_currentTime">
+          <property name="minimumSize">
+           <size>
+            <width>80</width>
+            <height>20</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);</string>
+          </property>
+          <property name="text">
+           <string>00:00:00</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="VideoSlider" name="slider_videoProcess">
+          <property name="styleSheet">
+           <string notr="true">QSlider::groove:horizontal {
+    border: 1px solid #4A708B;
+    background: #C0C0C0;
+    height: 5px;
+    border-radius: 1px;
+    padding-left:-1px;
+    padding-right:-1px;
+}
+
+QSlider::sub-page:horizontal {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #B1B1B1, stop:1 #c4c4c4);
+    background: qlineargradient(x1: 0, y1: 0.2, x2: 1, y2: 1,
+        stop: 0 #5DCCFF, stop: 1 #1874CD);
+    border: 1px solid #4A708B;
+    height: 10px;
+    border-radius: 2px;
+}
+
+QSlider::add-page:horizontal {
+    background: #575757;
+    border: 0px solid #777;
+    height: 10px;
+    border-radius: 2px;
+}
+
+QSlider::handle:horizontal
+{
+    background: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5,
+        stop:0.6 #45ADED, stop:0.778409 rgba(255, 255, 255, 255));
+
+    width: 11px;
+    margin-top: -3px;
+    margin-bottom: -3px;
+    border-radius: 5px;
+}
+
+QSlider::handle:horizontal:hover {
+    background: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0.6 #2A8BDA,
+        stop:0.778409 rgba(255, 255, 255, 255));
+
+    width: 11px;
+    margin-top: -3px;
+    margin-bottom: -3px;
+    border-radius: 5px;
+}
+
+QSlider::sub-page:horizontal:disabled {
+    background: #00009C;
+    border-color: #999;
+}
+
+QSlider::add-page:horizontal:disabled {
+    background: #eee;
+    border-color: #999;
+}
+
+QSlider::handle:horizontal:disabled {
+    background: #eee;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+}</string>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="lb_totalTime">
+          <property name="minimumSize">
+           <size>
+            <width>80</width>
+            <height>20</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);</string>
+          </property>
+          <property name="text">
+           <string>00:00:00</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <widget class="QPushButton" name="pb_open">
+          <property name="minimumSize">
+           <size>
+            <width>40</width>
+            <height>40</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>40</width>
+            <height>40</height>
+           </size>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="resource.qrc">
+            <normaloff>:/lib/gedan.png</normaloff>:/lib/gedan.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>35</width>
+            <height>35</height>
+           </size>
+          </property>
+          <property name="autoDefault">
+           <bool>true</bool>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pb_play">
+          <property name="minimumSize">
+           <size>
+            <width>40</width>
+            <height>40</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>40</width>
+            <height>40</height>
+           </size>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="resource.qrc">
+            <normaloff>:/images/start_white.png</normaloff>:/images/start_white.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>40</width>
+            <height>40</height>
+           </size>
+          </property>
+          <property name="autoDefault">
+           <bool>true</bool>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pb_pause">
+          <property name="minimumSize">
+           <size>
+            <width>40</width>
+            <height>40</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>40</width>
+            <height>40</height>
+           </size>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="resource.qrc">
+            <normaloff>:/images/pause_white.png</normaloff>:/images/pause_white.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>40</width>
+            <height>40</height>
+           </size>
+          </property>
+          <property name="autoDefault">
+           <bool>true</bool>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pb_stop">
+          <property name="minimumSize">
+           <size>
+            <width>40</width>
+            <height>40</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>40</width>
+            <height>40</height>
+           </size>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="resource.qrc">
+            <normaloff>:/images/stop_white.png</normaloff>:/images/stop_white.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>40</width>
+            <height>40</height>
+           </size>
+          </property>
+          <property name="autoDefault">
+           <bool>true</bool>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QLabel" name="lb_videoName">
+          <property name="minimumSize">
+           <size>
+            <width>200</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);</string>
+          </property>
+          <property name="text">
+           <string>FileName</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pb_volumn">
+          <property name="minimumSize">
+           <size>
+            <width>40</width>
+            <height>40</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>40</width>
+            <height>40</height>
+           </size>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="resource.qrc">
+            <normaloff>:/lib/shengyin.png</normaloff>:/lib/shengyin.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>35</width>
+            <height>35</height>
+           </size>
+          </property>
+          <property name="autoDefault">
+           <bool>true</bool>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QSlider" name="slider_volumn">
+          <property name="minimumSize">
+           <size>
+            <width>80</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>80</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QSlider::groove:horizontal {
+    border: 1px solid #4A708B;
+    background: #C0C0C0;
+    height: 5px;
+    border-radius: 1px;
+    padding-left:-1px;
+    padding-right:-1px;
+}
+
+QSlider::sub-page:horizontal {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #B1B1B1, stop:1 #c4c4c4);
+    background: qlineargradient(x1: 0, y1: 0.2, x2: 1, y2: 1,
+        stop: 0 #5DCCFF, stop: 1 #1874CD);
+    border: 1px solid #4A708B;
+    height: 10px;
+    border-radius: 2px;
+}
+
+QSlider::add-page:horizontal {
+    background: #575757;
+    border: 0px solid #777;
+    height: 10px;
+    border-radius: 2px;
+}
+
+QSlider::handle:horizontal
+{
+    background: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5,
+        stop:0.6 #45ADED, stop:0.778409 rgba(255, 255, 255, 255));
+
+    width: 11px;
+    margin-top: -3px;
+    margin-bottom: -3px;
+    border-radius: 5px;
+}
+
+QSlider::handle:horizontal:hover {
+    background: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0.6 #2A8BDA,
+        stop:0.778409 rgba(255, 255, 255, 255));
+
+    width: 11px;
+    margin-top: -3px;
+    margin-bottom: -3px;
+    border-radius: 5px;
+}
+
+QSlider::sub-page:horizontal:disabled {
+    background: #00009C;
+    border-color: #999;
+}
+
+QSlider::add-page:horizontal:disabled {
+    background: #eee;
+    border-color: #999;
+}
+
+QSlider::handle:horizontal:disabled {
+    background: #eee;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+}</string>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pb_online">
+          <property name="minimumSize">
+           <size>
+            <width>40</width>
+            <height>40</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>40</width>
+            <height>40</height>
+           </size>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="resource.qrc">
+            <normaloff>:/lib/sousuo.png</normaloff>:/lib/sousuo.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>30</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="autoDefault">
+           <bool>true</bool>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pb_listShow">
+          <property name="minimumSize">
+           <size>
+            <width>40</width>
+            <height>40</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>40</width>
+            <height>40</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <family>微软雅黑</family>
+            <pointsize>12</pointsize>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);</string>
+          </property>
+          <property name="text">
+           <string>三</string>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>40</width>
+            <height>40</height>
+           </size>
+          </property>
+          <property name="autoDefault">
+           <bool>true</bool>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>VideoItem</class>
+   <extends>QWidget</extends>
+   <header>videoitem.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>VideoSlider</class>
+   <extends>QSlider</extends>
+   <header>videoslider.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="resource.qrc"/>
+ </resources>
+ <connections/>
+</ui>
